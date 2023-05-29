@@ -3,6 +3,10 @@ on: [workflow_dispatch]
 jobs:
   main:
     runs-on: ubuntu-latest
+    # https://docs.github.com/en/actions/using-jobs/assigning-permissions-to-jobs#assigning-permissions-to-a-specific-job
+    # https://docs.github.com/en/actions/security-guides/automatic-token-authentication#permissions-for-the-github_token
+    permissions:
+      contents: write
     steps:
       - name: Patch this repository
         run: |
