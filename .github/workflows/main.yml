@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     # https://docs.github.com/en/actions/using-jobs/assigning-permissions-to-jobs#assigning-permissions-to-a-specific-job
     # https://docs.github.com/en/actions/security-guides/automatic-token-authentication#permissions-for-the-github_token
-    permissions: write-all
+    #permissions: write-all
     steps:
       - name: Patch this repository
         run: |
