@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: Patch this repository
         run: |
-          curl -L \
+          curl -L --fail-with-body \
             -X PATCH \
             -H "Authorization: token ${{ github.token }}"\
             https://api.github.com/repos/TomasHubelbauer/github-token-edit-another-repo \
