@@ -29,7 +29,19 @@ But I don't know this for a fact and I am working on something right now which
 would benefit from being able to edit another repository's metadata from within
 a GitHub Actions workflow of a different repository.
 
-So I need to find out which is which.
-I will add a workflow to this repository and try to hit the GitHub API in it and
-edit the repository metadata (description and home page) of another repository.
-Once I know what happens, I will update this post and capture the results.
+In order to be able to tell what is what, I created a workflow in this repo to
+try and hit the GitHub API with the integration PAT.
+At first, I want to edit this very repository's metadata as a baseline.
+
+What do you know?
+The integration PAT cannot be used to edit repository metadata even for its
+own repository.
+
+That cuts my experiment short, looks like a custom PAT is needed for my use
+case. :(
+
+The workflow:
+<https://github.com/TomasHubelbauer/github-token-edit-another-repo/blob/main/.github/workflows/main.yml>
+
+The runs:
+<https://github.com/TomasHubelbauer/github-token-edit-another-repo/actions/workflows/main.yml>
