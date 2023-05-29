@@ -1,0 +1,13 @@
+name: main
+on: [workflow_dispatch]
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Patch this repository
+        run: |
+          curl -L \
+            -X PATCH \
+            -H "Authorization: token ${{ github.token }}"\
+            https://api.github.com/repos/TomasHubelbauer/github-token-edit-another-repo \
+            -d '{"description":"Last tested at $(date -Iseconds)","homepage":"https://hubelbauer.net/$(date -Iseconds)"}'
